@@ -4,16 +4,15 @@
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
 @import "animation";
 @import "functions";
 
-@if $firework_desktop_particules != "0" {
-  $particles: to-number($firework_desktop_particules);
-  $particule-size: #{$firework_desktop_particule_size}px;
-  $width: to-number($firework_desktop_width);
-  $height: to-number($firework_desktop_height);
-  $gravity: #{$firework_desktop_gravity}px;
+@if $firework_mobile_particules != "0" {
+  $particles: to-number($firework_mobile_particules);
+  $particule-size: #{$firework_mobile_particule_size}px;
+  $width: to-number($firework_mobile_width);
+  $height: to-number($firework_mobile_height);
+  $gravity: #{$firework_mobile_gravity}px;
 
   // Create the explosion...
   $box-shadow: ();

@@ -1,0 +1,52 @@
+firework_desktop_particules:
+  type: integer
+  default: 50
+  description:
+    en: How many particules to display. 0 to disable.
+firework_desktop_particule_size:
+  type: integer
+  default: 5
+  description:
+    en: Particle size in pixels.
+firework_desktop_width:
+  type: integer
+  default: 500
+  description:
+    en: Width in pixels of a firework.
+firework_desktop_height:
+  type: integer
+  default: 500
+  description:
+    en: Height in pixels of a firework.
+firework_desktop_gravity:
+  type: integer
+  default: 200
+  description:
+    en: Particle fall distance in pixels.
+
+firework_mobile_particules:
+  type: integer
+  label: Particules
+  default: 50
+  description:
+    en: How many particules to display. 0 to disable.
+firework_mobile_particule_size:
+  type: integer
+  default: 3
+  description:
+    en: Particle size in pixels.
+firework_mobile_width:
+  type: integer
+  default: 200
+  description:
+    en: Width in pixels of the explosion
+firework_mobile_height:
+  type: integer
+  default: 200
+  description:
+    en: Height in pixels of the explosion
+firework_mobile_gravity:
+  type: integer
+  default: 200
+  description:
+    en: Particle fall distance in pixels.
