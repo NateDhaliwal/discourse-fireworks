@@ -17,7 +17,7 @@ div#fireworks {
 @import "animation";
 @import "functions";
 
-@if $use_tsParticles_fireworks == false { 
+@if $use_tsParticles_fireworks { 
   @if $firework_desktop_particules != "0" {
     $particles: to-number($firework_desktop_particules);
     $particule-size: #{$firework_desktop_particule_size}px;
