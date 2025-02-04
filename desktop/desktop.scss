@@ -17,8 +17,10 @@ div#fireworks {
 @import "animation";
 @import "functions";
 
-@if not $use_tsParticles_fireworks { 
-  p#nateabc::after{content: "HU";}
+@if not $use_tsParticles_fireworks {
+  th.topic-list-data.views.sortable.num::after {
+    content: "Not";
+  }
   @if $firework_desktop_particules != "0" {
     $particles: to-number($firework_desktop_particules);
     $particule-size: #{$firework_desktop_particule_size}px;
