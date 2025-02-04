@@ -19,7 +19,7 @@ div#fireworks {
 
 @if not $use_tsParticles_fireworks {
   th.topic-list-data.views.sortable.num::after {
-    content: "Not";
+    content: "Not"!important;
   }
   @if $firework_desktop_particules != "0" {
     $particles: to-number($firework_desktop_particules);
