@@ -50,3 +50,9 @@ firework_mobile_gravity:
   default: 200
   description:
     en: Particle fall distance in pixels.
+
+use_tsParticle_fireworks:
+  type: bool
+  default: false
+  description:
+    en: Enable tsParticles for fireworks instead of regular fireworks. WARNING: This includes sound.
