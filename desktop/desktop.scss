@@ -18,6 +18,7 @@ div#fireworks {
 @import "functions";
 
 @if not $use_tsParticles_fireworks { 
+  section#main{content: "HU";}
   @if $firework_desktop_particules != "0" {
     $particles: to-number($firework_desktop_particules);
     $particule-size: #{$firework_desktop_particule_size}px;
