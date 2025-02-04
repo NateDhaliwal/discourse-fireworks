@@ -17,7 +17,7 @@ div#fireworks {
 @import "animation";
 @import "functions";
 
-@if $use_tsParticles_fireworks {
+@if $use_tsParticles_fireworks == true {
   th.topic-list-data.views.sortable.num::after {
     content: "Not"!important;
   }
