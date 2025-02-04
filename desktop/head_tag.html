@@ -1,7 +1,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@tsparticles/fireworks@3.7.1/tsparticles.fireworks.bundle.min.js"></script>
 <script type="text/discourse-plugin" version="0.8">
+  console.log(settings.use_tsParticles_fireworks);
   if (settings.use_tsParticles_fireworks) {
-    console.log(settings.use_tsParticles_fireworks);
+    
     (async () => {
     await fireworks();
     })();
