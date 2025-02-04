@@ -1,10 +1,10 @@
 /* For tsParticles fireworks */
 div#fireworks {
-    z-index: 999999999999;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    pointer-events: none;
+  z-index: 999999999999;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
 }
 
 
@@ -14,93 +14,93 @@ div#fireworks {
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-@if ($use_tsparticles_fireworks not true) {
-    @import "animation";
-    @import "functions";
-    
-    @if $firework_desktop_particules != "0" {
-      $particles: to-number($firework_desktop_particules);
-      $particule-size: #{$firework_desktop_particule_size}px;
-      $width: to-number($firework_desktop_width);
-      $height: to-number($firework_desktop_height);
-      $gravity: #{$firework_desktop_gravity}px;
-    
-      // Create the explosion...
-      $box-shadow: ();
-      $box-shadow2: ();
-    
-      @for $i from 0 through $particles {
-        $box-shadow: $box-shadow,
-          random($width)-$width /
-            2 +
-            px
-            random($height)-$height /
-            1.2 +
-            px
-            hsl(random(360), 100, 50);
-        $box-shadow2: $box-shadow2, 0 0 #fff;
-      }
-    
-      .fireworks > .before,
-      .fireworks > .after {
-        position: absolute;
-        width: $particule-size;
-        height: $particule-size;
-        border-radius: 50%;
-        box-shadow: $box-shadow2;
-        @include animation(
-          (
-            3s bang ease-out infinite backwards,
-            3s gravity ease-in infinite backwards,
-            10s position linear infinite backwards
-          )
-        );
-      }
-    
-      .fireworks > .after {
-        @include animation-delay((1.25s, 1.25s, 1.25s));
-        @include animation-duration((1.25s, 1.25s, 6.25s));
-      }
-    
-      @include keyframes(bang) {
-        to {
-          box-shadow: $box-shadow;
-        }
-      }
-    
-      @include keyframes(gravity) {
-        to {
-          @include transform(translateY($gravity));
-          opacity: 0;
-        }
-      }
-    
-      @include keyframes(position) {
-        0%,
-        19.9% {
-          margin-top: 15%;
-          margin-left: 40%;
-        }
-        20%,
-        39.9% {
-          margin-top: 15%;
-          margin-left: 30%;
-        }
-        40%,
-        59.9% {
-          margin-top: 15%;
-          margin-left: 70%;
-        }
-        60%,
-        79.9% {
-          margin-top: 15%;
-          margin-left: 20%;
-        }
-        80%,
-        99.9% {
-          margin-top: 15%;
-          margin-left: 80%;
-        }
+@import "animation";
+@import "functions";
+
+@if ($use_tsparticles_fireworks not true) { 
+  @if $firework_desktop_particules != "0" {
+    $particles: to-number($firework_desktop_particules);
+    $particule-size: #{$firework_desktop_particule_size}px;
+    $width: to-number($firework_desktop_width);
+    $height: to-number($firework_desktop_height);
+    $gravity: #{$firework_desktop_gravity}px;
+  
+    // Create the explosion...
+    $box-shadow: ();
+    $box-shadow2: ();
+  
+    @for $i from 0 through $particles {
+      $box-shadow: $box-shadow,
+        random($width)-$width /
+          2 +
+          px
+          random($height)-$height /
+          1.2 +
+          px
+          hsl(random(360), 100, 50);
+      $box-shadow2: $box-shadow2, 0 0 #fff;
+    }
+  
+    .fireworks > .before,
+    .fireworks > .after {
+      position: absolute;
+      width: $particule-size;
+      height: $particule-size;
+      border-radius: 50%;
+      box-shadow: $box-shadow2;
+      @include animation(
+        (
+          3s bang ease-out infinite backwards,
+          3s gravity ease-in infinite backwards,
+          10s position linear infinite backwards
+        )
+      );
+    }
+  
+    .fireworks > .after {
+      @include animation-delay((1.25s, 1.25s, 1.25s));
+      @include animation-duration((1.25s, 1.25s, 6.25s));
+    }
+  
+    @include keyframes(bang) {
+      to {
+        box-shadow: $box-shadow;
       }
     }
+  
+    @include keyframes(gravity) {
+      to {
+        @include transform(translateY($gravity));
+        opacity: 0;
+      }
+    }
+  
+    @include keyframes(position) {
+      0%,
+      19.9% {
+        margin-top: 15%;
+        margin-left: 40%;
+      }
+      20%,
+      39.9% {
+        margin-top: 15%;
+        margin-left: 30%;
+      }
+      40%,
+      59.9% {
+        margin-top: 15%;
+        margin-left: 70%;
+      }
+      60%,
+      79.9% {
+        margin-top: 15%;
+        margin-left: 20%;
+      }
+      80%,
+      99.9% {
+        margin-top: 15%;
+        margin-left: 80%;
+      }
+    }
+  }
 }
